@@ -1,0 +1,67 @@
+:root {
+    /* Primary Colors */
+    --primary-background-color: #111; /* Set your primary background color */
+    --text-color: #fff; /* Set your text color */
+
+    /* Header Colors */
+    --secondary-background-color: #222; /* Set your secondary background color */
+    --header-text-color: #fff; /* Set your header text color */
+    --link-color: #fff; /* Set your link color */
+
+    /* Footer Colors */
+    --footer-background-color: #333; /* Set your footer background color */
+    --footer-text-color: #fff; /* Set your footer text color */
+
+    /* Disclaimer Colors */
+    --disclaimer-text-color: #fff; /* Set your disclaimer text color */
+
+    /* Privacy Terms Link Colors */
+    --privacy-terms-link-color: #fff; /* Set your privacy terms link color */
+    --privacy-terms-link-hover-color: #ddd; /* Set your privacy terms link hover color */
+
+    /* Small Menu Colors */
+    --small-menu-background-color: #222; /* Set your small menu background color */
+
+    /* Action Button Colors */
+    --action-button-background-color: #0074d9; /* Set your action button background color */
+    --action-button-text-color: #fff; /* Set your action button text color */
+
+    /* Table Colors */
+    --table-border-color: #ddd; /* Set your table border color */
+    --table-header-background-color: #222; /* Set your table header background color */
+    --table-header-text-color: #fff; /* Set your table header text color */
+    --table-row-background-color: #333; /* Set your table row background color */
+    --table-row-hover-color: #555; /* Set your table row hover color */
+
+    /* Striped Table Colors */
+    --striped-table-header-background-color: #f2f2f2; /* Set your striped table header background color */
+    --striped-table-header-text-color: #000; /* Set your striped table header text color */
+    --striped-table-even-row-color: #f2f2f2; /* Set your striped table even row color */
+    --striped-table-row-hover-color: #ddd; /* Set your striped table row hover color */
+
+    /* Dashboard Item Colors */
+    --dashboard-item-background-color: #3498db; /* Set your dashboard item background color */
+    --dashboard-item-text-color: #fff; /* Set your dashboard item text color */
+    --dashboard-item-hover-color: darken(currentColor, 10%); /* Set your dashboard item hover color */
+    --dashboard-item-1-color: #3498db; /* Set your dashboard item 1 color */
+    --dashboard-item-2-color: #e74c3c; /* Set your dashboard item 2 color */
+    --dashboard-item-3-color: #2ecc71; /* Set your dashboard item 3 color */
+    --dashboard-item-4-color: #f39c12; /* Set your dashboard item 4 color */
+    --dashboard-item-5-color: #9b59b6; /* Set your dashboard item 5 color */
+    --dashboard-item-6-color: #34495e; /* Set your dashboard item 6 color */
+    --dashboard-item-7-color: #f77067; /* Set your dashboard item 7 color */
+    --dashboard-item-8-color: #d35400; /* Set your dashboard item 8 color */
+    --dashboard-item-9-color: #1abc9c; /* Set your dashboard item 9 color */
+
+    /* Red Button Colors */
+    --red-button-background-color: #f44336; /* Set your red button background color */
+    --red-button-text-color: #fff; /* Set your red button text color */
+    --red-button-hover-color: #d32f2f; /* Set your red button hover color */
+    --red-button-active-color: #b71c1c; /* Set your red button active color */
+
+    /* Green Button Colors */
+    --green-button-background-color: #4caf50; /* Set your green button background color */
+    --green-button-text-color: #fff; /* Set your green button text color */
+    --green-button-hover-color: #388e3c; /* Set your green button hover color */
+    --green-button-active-color: #2e7d32; /* Set your green button active color */
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Dashboard - Kamran Tailor</title>
+    <script> const pageName = 'Dashboard'; </script>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles for loading spinner */
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin: auto;
+            margin-top: 50px;
+            display: none; /* Initially hidden */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="loader" id="loader"></div> <!-- Loading spinner -->
+        <span id="cntt">
+            <center>
+                <h1><span id="greeting"></span></h1>
+                Click on a Button below to get started
+                <div class="dashboard" id="dashboard">
+                    <div class="item" id="user-settings" onclick="navigateTo('user-settings')">Your Account</div>
+                    <div class="item" id="tubeTime" onclick="navigateTo('tube-time')">Tube Time</div>
+                    <div class="item" id="codedItems" onclick="navigateTo('coded-items')">Coded Items</div>
+                    <div class="item" id="gaming" onclick="navigateTo('gaming')">Gaming</div>
+                    <div class="item" id="space" onclick="navigateTo('space')">Space</div>
+                    <div class="item" id="aviation" onclick="navigateTo('aviation')">Aviation</div>
+                    <div class="item" id="music" onclick="navigateTo('music')">Music</div>
+                    <div class="item" id="transport" onclick="navigateTo('transport')">Transport</div>
+                    <div class="item" id="admin" onclick="navigateTo('admin')">Admin</div>
+                    <div class="item" id="other" onclick="navigateTo('other')">Other</div>
+                </div>
+            </center>
+            <br>
+            <button class="logout-button" onclick="deleteUserSession()">Logout</button>
+        </span> 
+    </main>
+    <script src="../global.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Display loader for 10 seconds before executing onStartData()
+        //window.onload = function() {
+        //    var loader = document.getElementById("loader");
+        //    var content = document.getElementById("cntt");
+        //    loader.style.display = "block";
+        //    content.style.display = "none";
+        //    setTimeout(function() {
+        //        loader.style.display = "none";
+        //        content.style.display = "block";
+        //        onStartData();
+        //    }, 1000); // 10 seconds
+        //};
+
+        onStartData()
+    </script>
+</body>

@@ -1,0 +1,113 @@
+/* Homepage Content Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product,
+.service {
+    background-color: #444;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+.servicesH1, .newsH1, .aboutH1 {
+    margin-bottom: 25px;
+}
+
+.product img,
+.service img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3,
+.service h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial {
+    background-color: #444;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+/* Adjusted CSS for the image carousel */
+.news-carousel {
+    overflow-x: scroll;
+    white-space: nowrap; /* Prevent items from wrapping */
+    width: 100%; /* Set a fixed width for the container */
+}
+
+.carousel-container {
+    display: inline-flex;
+    gap: 20px; /* Adjust the spacing between images */
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    width: auto; /* Allow the container to expand as needed */
+}
+
+.carousel-item {
+    position: relative; /* Enable absolute positioning within the item */
+    text-align: center;
+    padding: 0;
+    width: 200px; /* Set a fixed width for each item */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.news-title {
+    position: absolute; /* Position the title absolutely within the item */
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 0; /* Center the title horizontally */
+    right: 0; /* Center the title horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a background color to the title */
+    color: #fff; /* Text color */
+    padding: 5px; /* Padding around the title */
+}
+
+/* CSS for circular "View All" button */
+.view-all-button {
+    width: 50px; /* Set a fixed width and height to make it circular */
+    height: 50px;
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+    text-align: center;
+    line-height: 50px; /* Center the content vertically */
+    font-size: 20px; /* Adjust font size as needed */
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px; /* Add margin for spacing */
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../../../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <br>
+        <center> 
+            <h1>
+                Add User
+            </h1>
+        </center>
+        <br>
+        <div id="form">
+            <label for="first_name">First Name:</label><br>
+            <input type="text" id="first_name" name="first_name" required><br><br>
+    
+            <label for="second_name">Second Name:</label><br>
+            <input type="text" id="second_name" name="second_name" required><br><br>
+    
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="permissions">Permissions:</label><br>
+            <input type="text" id="permissions" name="permissions" required><br><br>
+    
+            <label for="phoneNumber">Phone Number:</label><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+    
+            <span id="update" onclick="addUser()">Add</span>
+        </div>
+        <br>
+        <button class="red-button" onclick="navigateTo('../')">Back</button> 
+    </main> 
+    <script>
+        function navigateTo(loc) {
+            window.location = loc;
+        }
+    </script>
+    <script src="../../../../global.js"></script>
+    <script src="script.js"></script>
+    <script src="../../adminCheck.js"></script>
+</body>

@@ -1,0 +1,77 @@
+#div5 {
+    float:right;
+}
+#bkls{
+    background-color: #B36305;
+}
+#cnts {
+    background-color: 	#E32017;
+}
+#crls {
+    background-color: 	#FFD300;
+}
+#diss {
+    background-color: #00782A;
+}  
+#h_cs {
+    background-color: #F3A9BB;
+}
+#jues {
+    background-color: #A0A5A9;
+}
+#mets {
+    background-color: #9B0056;
+    color: white;
+}
+#nors {
+    background-color: #000000;
+    color: white;
+}
+#pics {
+    background-color: #003688;
+    color: white;
+}
+#vics {
+    background-color: #0098D4;
+}
+#w_cs {
+    background-color: #95CDBA;
+}
+#ells {
+    background-color: #7156A5;
+    color: white;
+}
+#trms {
+    background-color: 	#84B817;
+}
+#lnos {
+    background-color: 	#EE7C0E ;
+}
+#dlrs {
+    background-color: 	#00A4A7 ;
+}
+
+
+@media screen and (min-width: 768px) {
+    .cop {
+        float: left; 
+        height: 57px;
+        width: 150px; 
+        padding: 1%;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .cop {
+        float: left; 
+        height: 40px;
+        width: 90%; 
+        padding: 1%;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+    }
+}

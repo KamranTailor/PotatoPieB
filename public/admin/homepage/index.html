@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../../global.css">
+</head>
+<body>
+    <main>
+        <br>
+        <center> 
+            <h1>
+                Homepage Info 👋
+            </h1>
+        </center>
+       
+        <textarea id="dataTextArea" rows="10" cols="50"></textarea>
+        <br>
+        <button class="red-button" onclick="navigateTo('/dashboard')">Back</button>
+        <button class="green-button" onclick="submit()">Submit</button>
+
+
+    </main>
+
+    <script>
+        async function fetchDataAndDisplay() {
+            try {
+                const resBanner = await fetch("/homepageBanner");
+                const dataBanner = await resBanner.json();
+
+                // Display the data in textarea
+                const dataTextArea = document.getElementById('dataTextArea');
+                dataTextArea.value = dataBanner.data;
+            } catch (error) {
+                console.error('Error fetching or displaying data:', error);
+            }
+        }
+
+        async function submit() {
+            const toSend = document.getElementById("dataTextArea").value;
+            const response = await fetch('/homepageBanner/POST', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({data: toSend})
+            });
+            const data = await response.json();
+            console.log(data)
+        }
+
+        // Call the function when the page loads
+        window.onload = fetchDataAndDisplay;
+    </script> 
+    <script>
+        function navigateTo(loc) {
+            window.location = loc;
+        }
+    </script>
+    <script src="../../../global.js"></script>
+    <script src="script.js"></script>
+</body>

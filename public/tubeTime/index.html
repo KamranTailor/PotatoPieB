@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../global.css">
+    <style>
+    </style>
+</head>
+<body>
+    <main>
+        <center>
+            <h1>Tube Time</h1>  
+
+            <div class="dashboard" id="dashboard">
+                <div class="item" id="bus-times" onclick="navigateTo('bus-times')">Bus Times</div>
+                <div class="item" id="train-times" onclick="navigateTo('train-times')">Train Times</div>
+                <div class="item" id="bike-points" onclick="navigateTo('bike-points')">Bike Points</div>
+                <div class="item" id="train-status" onclick="navigateTo('train-status')">Train Status</div>
+            </div>
+        </center>
+
+    </main> 
+    <script>
+        function navigateTo(page) {
+            window.location.href = './' + page;
+        }
+    </script>
+    <script src="../global.js"></script>
+</body>

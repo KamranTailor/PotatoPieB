@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+    <main>
+        <br>
+        <center>
+            <h1>Music</h1>
+            Click on a Button below to get started
+            <div class="dashboard" id="dashboard">
+                <div class="item" id="whitney-housto" onclick="navigateTo('2.0')">Music 2.0</div>
+                <div class="item" id="taylor-swift" onclick="navigateTo('taylor-swift')">Taylor Swift</div>
+                <div class="item" id="whitney-housto" onclick="navigateTo('whitney-houston')">Whitney Houston</div>
+            </div>
+        </center>
+
+        <script>
+            function navigateTo(section) {
+                switch (section) {
+                    case 'taylor-swift':
+                        window.location = './taylor-swift';
+                        break;
+                    case 'whitney-houston':
+                        window.location = './whitney-houston';
+                        break;
+                    case '2.0':
+                        window.location = '/music_2';
+                        break;
+                }
+            }
+        </script>
+
+    </main> 
+    <script src="../../global.js"></script>
+</body>

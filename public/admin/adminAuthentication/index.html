@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <br>
+        <center><h1>👋 Hello Administartor Please enter your OTP 🔐</h1></center>
+        <br>
+        <div class="pin-container">
+            <input type="number" class="pin-input" placeholder="Enter 8-digit PIN" id="pin" pattern="[0-9]{8}" maxlength="8" required> 
+            <button type="submit" class="btn" onclick="sub()">Submit</button>
+        </div>
+        <br>
+        <button class="red-button" onclick="navigateTo('/dashboard')">Back</button>
+
+    </main> 
+    <script>
+        function navigateTo(loc) {
+            window.location = loc;
+        }
+    </script>
+    <script src="../../../global.js"></script>
+    <script src="script.js"></script>
+</body>

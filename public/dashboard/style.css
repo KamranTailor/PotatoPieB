@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+.logout-button {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+.logout-button:active {
+    background-color: #b71c1c; /* Darkest red */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <br>
+    <center>
+        <h1>Music: Select an Artist</h1>
+        <input type="text" id="searchInput" placeholder="Search by name">
+    </center>
+    <div class="notice-a" onclick="prm()">
+         Can't find your artist? Use a code!
+    </div>
+    <center>
+        <div class="dashboard_img" id="dashboard_img">
+        </div>
+    </center>
+</main>
+<script>
+    function prm() {
+        const id= prompt("Artist ID");
+        window.location= `./artists?${id}` 
+    }
+</script>
+<script src="../global.js"></script>
+<script src="../loginCheck.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

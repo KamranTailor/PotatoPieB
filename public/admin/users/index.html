@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../../global.css">
+</head>
+<body>
+    <main>
+        <br>
+        <center> 
+            <h1>
+                All Users 
+            </h1>
+        </center>
+        <button class="red-button" onclick="navigateTo('/dashboard')">Back</button> 
+        <button class="green-button" onclick="navigateTo('./create')">Add User</button>
+        <table>
+            <tr>
+                <thead>
+                    <td>Second Name</td>
+                    <td>First Name</td>
+                    <td>Userame</td>
+                </thead>
+            </tr>
+            <tbody id="TABLEboddy"></tbody>
+        </table>
+        <br>
+
+    </main> 
+    <script>
+        function navigateTo(loc) {
+            window.location = loc;
+        }
+    </script>
+    <script src="../../../global.js"></script>
+    <script src="script.js"></script>
+    <script src="../adminCheck.js"></script>
+</body>

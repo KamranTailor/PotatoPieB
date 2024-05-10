@@ -1,0 +1,37 @@
+.pin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.pin-input {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.pin-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+}
+
+.btn {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 21px;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

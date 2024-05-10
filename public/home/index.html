@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Home - Kamran Tailor</title>
+    <script> const pageName = 'Home'; </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>  
+
+    <main>
+        <section id="about">
+            <h1 class="aboutH1">About Us</h1>
+            <p>👋 Hello and thank you for visiting my website! I'm Kamran, and on this website is everything I have coded.</p>
+            <p>💻 I've used several coding languages such as Python, Node.js, JavaScript, HTML, and CSS to make this website.</p>
+            <p>📧 To get started, you will need to <a href="/login">Login</a>. If you have any questions, feel free to <a href="/home/#contact">Contact Us</a>.</p>
+        </section>
+
+        <!-- Old News-->
+        <section id="news">
+            <h1 class="newsH1">News</h1>
+            <div class="news-carousel">
+                <div class="carousel-container" id="carousel-container">
+                    <div class="carousel-item">
+                        <h2 class="news-title">HTML</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="news-title">HTML</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="news-title">HTML</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="news-title">HTML</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="news-title">HTML</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    
+
+        <!--Services-->
+        <section id="services">
+            <h1 class="servicesH1">Our Services</h1>
+            <div class="service">
+                <h3>Apps</h3>
+                <p>We have a mutiple apps on the app store. Ranging from information about the Londopn Transport system to information about Fortnite!</p>
+            </div>
+
+            <div class="service">
+                <h3>Tube Time - Online</h3>
+                <p>View real time info about the London Underground and other TFL services.</p>
+            </div>
+
+            <div class="service">
+                <h3>Space</h3>
+                <p>Photos and vieos straight from outer space.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or inquiries, feel free to contact us.</p>
+            
+            <div id="contact-items">
+                <label for="email">Email:</label>
+                <input name='email' id="email" type="email"> <br>
+                
+                <label for="subject">Subject:</label>  
+                <input name='subject' id="subject" type="text"> <br>
+
+                <label for="text">Your Message:</label>
+                <textarea id="text" name="text"></textarea> <br> 
+                <button id="submit-cu" onclick="sendContactRequest()">Submit</button>
+            </div>
+        </section>
+    </main>
+    <script> 
+        function toggleTheme() { 
+            
+            // Obtains an array of all <link> 
+            // elements. 
+            // Select your element using indexing. 
+            var theme = document.getElementsByTagName('link')[0]; 
+
+            // Change the value of href attribute  
+            // to change the css sheet. 
+            if (theme.getAttribute('href') == '/dark.css') { 
+                theme.setAttribute('href', '/dark.css'); 
+            } else { 
+                theme.setAttribute('href', '/dark.css'); 
+            } 
+        } 
+    </script> 
+    <script src="../global-banner.js"></script>
+    <script src="contact.js"></script>
+    <script src="news.js"></script>
+</body>

@@ -1,0 +1,129 @@
+/* Style the login section */
+#login {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the heading */
+#login h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style labels for inputs */
+#login label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Style inputs */
+#login input[type="text"],
+#login input[type="password"] {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 95%;
+}
+
+/* Style the submit button */
+#login button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Style the submit button on hover */
+#login button:hover {
+    background-color: #0056b3;
+}
+
+#popup-container {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;  
+  }
+
+  /* Style for the overlay background */
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+
+input {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 95%;
+}
+
+        /* Styles for the modal */
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        #myModal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* Close button style */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+  
