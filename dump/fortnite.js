@@ -49,7 +49,8 @@ async function fetchFortniteItemShop() {
         await fsPromises.writeFile(filePath, jsonData, 'utf8');
 
         const timestampISO = new Date().toISOString();
-        const msg = (`Data has been saved to ${filePath}, *${timestampISO}*`);
+        const readableTimestamp = new Date(timestampISO).toLocaleString();
+        const msg = (`Data has been saved to ${filePath}, *${readableTimestamp}*`);
         console.log(msg)
 
         const hook = process.env.DITEMSHOP 

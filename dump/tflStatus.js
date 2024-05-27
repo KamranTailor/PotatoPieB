@@ -40,7 +40,8 @@ const fetchDataAndSave = async () => {
       };
 
       const timestampISO = new Date().toISOString();
-      const msg = (`Data Saved to, ${DATA_FILE_PATH}, *${timestampISO}*`);
+      const readableTimestamp = new Date(timestampISO).toLocaleString();
+      const msg = (`Data Saved to, ${DATA_FILE_PATH}, *${readableTimestamp}*`);
       const hook = process.env.DTFLDATA
       sendWebhookMessage(hook, msg)
 
