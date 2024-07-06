@@ -106,19 +106,21 @@ router.post('/album', async (req, res) => {
 });
 
 
-// Endpoint to write data to a file
-router.post('/POST', async (req, res) => {
+router.post('/user/details', async (req, res) => {
   try {
-    // Get the data from the request body
-    const { data } = req.body;
+    const { userId } = req.body;
 
-    // Write the data to the file
-    await fsPromises.writeFile('../database/homepage/banner/banner.txt', data, 'utf8');
+    if (!userId) {
+      return res.status(400).json({ error: 'User ID is required' });
+    }
 
-    res.json({ success: true });
+    // Retrieve user details from Spotify API
+    const userDetails = await spotifyApi.getUser(userId);
+
+    // Send the user details in the response
+    res.json({ status: true, user: userDetails.body });
   } catch (error) {
-    console.error('Error writing to the file:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ status: false, error: 'Unable to retrieve user details' });
   }
 });
 

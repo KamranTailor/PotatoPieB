@@ -8,7 +8,7 @@
     <!--User Head Data-->
     <title>Kamran Tailor</title>
     <script> const pageName = 'Login'; </script>
-    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../../global.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -16,33 +16,42 @@
 <main>
     <br>
     <center>
-        <h1 id="name">Music: Album</h1>
+        <h1 id="name"><span id="s-name"></span>'s Stats</h1>
     </center>
 
     <div class="container">
         <div class="text">
           <h2>Info</h2>
           <ul>
-            <li>Artists: <span id="artists"></span></li>
-            <li>Total Traks: <span id="total_tracks"></span> </li>
-            <li>Popularlarity: <span id="popularity"></span> </li>
-            <li>Release Date: <span id="release_date"></span> </li>
-            <li>Copyrights: <span id="copyrights"></span> </li>
+            <li>Genres: <span id="genres"></span></li>
+            <li>Type: <span id="type"></span> </li>
+            <li>Popularlarity: <span id="pop"></span> </li>
+            <li>Links: <span id="links"></span> </li>
           </ul>
         </div>
         <div class="image" id="image"></div>
     </div>
 
     <div class="alCon">
-        <h2>Tracks</h2>
+        <h2>Albums</h2>
         <br>
-        <div id="songs"></div>
+        <span id="buttons"></span>
+        <br>
+        <div id="albums" class="dashboard_img"></div>
+    </div>
+
+    <div class="alCon">
+        <h2>Singles</h2>
+        <br>
+        <span id="buttons-s"></span>
+        <br>
+        <div id="singles" class="dashboard_img"></div>
     </div>
     <br>
     <button class="red-button" onclick="back()">Back</button>
 </main>
-<script src="../../global.js"></script>
-<script src="../../loginCheck.js"></script>
+<script src="../../../global.js"></script>
+<script src="../../../loginCheck.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

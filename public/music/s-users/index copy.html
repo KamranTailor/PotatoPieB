@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #searchInput {
+            background-color: #444;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: white;
+            border: none;
+            font-size: 25px;
+            width: 40%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <br>
+    <center>
+        <h1>Enter your Spotify User ID</h1>
+        <input type="text" id="searchInput" placeholder="Enter ID"> <br>
+        <button class="green-button" onclick="processInput()">Submit</button>
+    </center>
+</main>
+<script>
+    function processInput() {
+            const input = document.getElementById('searchInput').value;
+            let code = input;
+
+            // Check if input is a URL
+            try {
+                const url = new URL(input);
+                const pathParts = url.pathname.split('/');
+                code = pathParts[pathParts.length - 1];
+            } catch (error) {
+                // Not a URL, keep the input as is
+            }
+
+            // Display the result
+            window.location = `./userData?${code}`
+        }
+</script>
+<script src="../../global.js"></script>
+<script src="../../loginCheck.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

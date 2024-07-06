@@ -1,5 +1,6 @@
 import { fetchFortniteItemShop } from './fortnite.js'; // Import the fetchFortniteItemShop function
 import { fetchDataAndSave } from './tflStatus.js';
+import { fetchDataFlight } from './flight.js';
 import cron from 'node-cron';
 
 // Call the function to fetch Fortnite item shop data
@@ -29,6 +30,14 @@ setInterval(async () => {
   await fetchDataAndSave();
 }, interval);
 
+const intervaln = 2 * 60 * 1000; // Interval set to every 2 minutes (2 * 60 seconds * 1000 milliseconds)
+setInterval(async () => {
+  //await fetchDataFlight();
+}, intervaln);
+
+
+
 // Execute the function
 runFortniteDataUpdate();
 fetchDataAndSave()
+fetchDataFlight()

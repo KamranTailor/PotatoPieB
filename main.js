@@ -18,6 +18,7 @@ import loginCheckRouter from './api/userVerification/loginCheck.js';
 
 import newsRouter from './api/news/news.js';
 import musicRouter from './api/music/artists.js';
+import spotifyRouter from './api/music/spotify.js';
 
 import sessionsAdminRouter from './api/admin/sessions.js';
 import usersAdminRouter from './api/users/users.js';
@@ -49,6 +50,7 @@ app.use('/ID', loginCheckRouter);
 
 app.use('/news', newsRouter);
 app.use('/music_a', musicRouter);
+app.use('/spotify', spotifyRouter);
 
 app.use('/sessionsAdmin', sessionsAdminRouter);
 app.use('/usersAdmin', usersAdminRouter);

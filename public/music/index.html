@@ -15,21 +15,17 @@
 <main>
     <br>
     <center>
-        <h1>Music: Select an Artist</h1>
-        <input type="text" id="searchInput" placeholder="Search by name">
-    </center>
-    <div class="notice-a" onclick="prm()">
-         Can't find your artist? Use a code!
-    </div>
-    <center>
-        <div class="dashboard_img" id="dashboard_img">
+        <h1>Music</h1>
+
+        <div class="dashboard" id="dashboard">
+            <div class="item" id="artists" onclick="navigateTo('./artists')">Artists</div>
+            <div class="item" id="spotify-profiles" onclick="navigateTo('./s-users')">Spotify Profiles</div>
         </div>
     </center>
 </main>
 <script>
-    function prm() {
-        const id= prompt("Artist ID");
-        window.location= `./artists?${id}` 
+    function navigateTo(tt) {
+        window.location = tt
     }
 </script>
 <script src="../global.js"></script>

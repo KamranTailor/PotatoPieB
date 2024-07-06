@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Login'; </script>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #searchInput {
+            background-color: #444;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: white;
+            border: none;
+            font-size: 25px;
+            width: 40%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="login-button">Login with Spotify</button>
+    <div id="user-info"></div>
+
+    <script>
+        const clientId = '80390c1cb1c5438f9ea3ed50f7875c0e';
+        const redirectUri = 'http://kamrantailor.com/music/s-users/';
+        const scopes = 'user-read-private user-read-email user-top-read user-follow-read';
+
+        document.getElementById('login-button').addEventListener('click', () => {
+            const authorizeURL = `https://accounts.spotify.com/authorize?response_type=code&client_id=${clientId}&scope=${encodeURIComponent(scopes)}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+            window.location.href = authorizeURL;
+        });
+
+        // Function to parse query parameters from URL
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const regex = /([^&=]+)=([^&]*)/g;
+            let match;
+            while (match = regex.exec(queryString)) {
+                params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+            }
+            return params;
+        }
+
+        async function fetchUserDetails(accessToken) {
+            try {
+                const response = await fetch('/user/details', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ accessToken })
+                });
+                const data = await response.json();
+                if (data.status) {
+                    document.getElementById('user-info').textContent = JSON.stringify(data, null, 2);
+                } else {
+                    document.getElementById('user-info').textContent = 'Failed to fetch user details';
+                }
+            } catch (error) {
+                document.getElementById('user-info').textContent = 'Error fetching user details';
+            }
+        }
+
+        window.onload = () => {
+            const params = getQueryParams();
+            if (params.code) {
+                // Exchange the authorization code for an access token
+                fetch('/callback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ code: params.code, redirectUri })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.accessToken) {
+                        fetchUserDetails(data.accessToken);
+                    } else {
+                        document.getElementById('user-info').textContent = 'Failed to get access token';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('user-info').textContent = 'Error during token exchange';
+                });
+            }
+        };
+    </script>
+</body>
+<script src="../../global.js"></script>
+<script src="../../loginCheck.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,56 +1,55 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto;
-    background-color: #333;
-    border-radius: 20px;
-    margin-top: 10px;
-  }
-
-  .alCon {
-    width: 100%;
-    background-color: #333;
-    border-radius: 20px;
-    margin-top: 10px;
-    padding: 20px;
-  }
-
-  .text {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .image {
-    flex: 1;
-    padding: 20px;
-  }
-
-  /* Optional: adjust styles as needed */
-  img {
-    max-width: 100%;
+.item_container {
+    position: relative;
     width: 160px;
     height: 160px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
+    margin-right: 20px;
+}
 
-  .text ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding-left: 0; /* Remove default left padding */
-  }
-  
-  .text ul li {
-    padding-left: 1em; /* Add padding to align text */
-    text-indent: -1em; /* Move text back to compensate for padding */
-  }
-  
-  .text ul li:before {
-    content: "◆"; /* Use a diamond character as the bullet point */
-    color: yellow; /* Set the color of the bullet point */
-    font-size: 1.2em; /* Adjust size if needed */
-    margin-right: 0.5em; /* Add space between bullet point and text */
-  }
-  
+.dashboard_img {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 1200px;
+    cursor: pointer;
+}
+
+.item_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.artist_name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+#searchInput {
+    background-color: #444;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.notice-a {
+    background-color: #333;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}

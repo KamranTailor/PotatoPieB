@@ -20,15 +20,15 @@ async function checkSession() {
       if (cps.message) {
           console.log("SA")
       } else {
-          alert("You need to login again")
-          localStorage.setItem('userLoggedIn', 'false')
-          window.location= '/login'
+          //alert("You need to login again")
+          //localStorage.setItem('userLoggedIn', 'false')
+          //window.location= '/login'
       }
   } catch (error) {
       console.error('Error:', error);
-      alert("You need to login again")
-      localStorage.setItem('userLoggedIn', 'false')
-      window.location= '/login'
+      //alert("You need to login again")
+      //localStorage.setItem('userLoggedIn', 'false')
+      //window.location= '/login'
 
   }
 }

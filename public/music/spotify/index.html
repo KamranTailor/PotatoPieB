@@ -12,26 +12,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-    <br>
-    <center>
-        <h1>Music: Select an Artist</h1>
-        <input type="text" id="searchInput" placeholder="Search by name">
-    </center>
-    <div class="notice-a" onclick="prm()">
-         Can't find your artist? Use a code!
-    </div>
-    <center>
-        <div class="dashboard_img" id="dashboard_img">
-        </div>
-    </center>
-</main>
-<script>
-    function prm() {
-        const id= prompt("Artist ID");
-        window.location= `./artists?${id}` 
-    }
-</script>
+    <h1>Login with Spotify</h1>
+    <a href="/spotify/login">Log in with Spotify</a>
+    <h2>Your Top Artists</h2>
+    <ul id="artist-list"></ul>
+</body>
 <script src="../../global.js"></script>
 <script src="../../loginCheck.js"></script>
 <script src="script.js"></script>
