@@ -6,18 +6,24 @@
 
     <!--User Head Data-->
     <title>Kamran Tailor</title>
-    <script> const pageName = 'Login'; </script>
+    <script> const pageName = 'Aviation Home'; const pagePermissions = "Bravo";  </script>
     <link rel="stylesheet" href="../../global.css">
 </head>
 <body>
     <main>
-        <br>
-        <center> 
-            <h1>
-                🚧 🏗️  We are working on this page 🏗️ 🚧
-            </h1>
+        <center>
+            <h1>✈️ Avation ✈️</h1>
+            Select one of our real time data feeds!
+            <div class="dashboard" id="dashboard">
+                <div class="item" onclick="navigateTo('flight')">Planes</div>
+            </div>
         </center>
-
+    
     </main> 
     <script src="../../global.js"></script>
+    <script> 
+        function navigateTo(location) {
+            window.location = `./${location}`;
+        }
+    </script>
 </body>

@@ -30,9 +30,9 @@ setInterval(async () => {
   await fetchDataAndSave();
 }, interval);
 
-const intervaln = 2 * 60 * 1000; // Interval set to every 2 minutes (2 * 60 seconds * 1000 milliseconds)
+const intervaln = 2000 //1 Second
 setInterval(async () => {
-  //await fetchDataFlight();
+  await fetchDataFlight();
 }, intervaln);
 
 
@@ -40,4 +40,3 @@ setInterval(async () => {
 // Execute the function
 runFortniteDataUpdate();
 fetchDataAndSave()
-fetchDataFlight()

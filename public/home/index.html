@@ -6,7 +6,7 @@
 
     <!--User Head Data-->
     <title>Home - Kamran Tailor</title>
-    <script> const pageName = 'Home'; </script>
+    <script> const pageName = 'Home'; const pagePermissions = "Other";  </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="style2.css">
@@ -44,8 +44,6 @@
                 </div>
             </div>
         </section>
-        
-        
     
 
         <!--Services-->
@@ -80,7 +78,7 @@
 
                 <label for="text">Your Message:</label>
                 <textarea id="text" name="text"></textarea> <br> 
-                <button id="submit-cu" onclick="sendContactRequest()">Submit</button>
+                <button id="submit-cu" class="blue-button" onclick="sendContactRequest()">Submit</button>
             </div>
         </section>
     </main>

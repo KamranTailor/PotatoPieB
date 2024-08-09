@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--User Head Data-->
+    <title>Kamran Tailor</title>
+    <script> const pageName = 'Music Collection Add New'; const pagePermissions = "Alpha";</script>
+    <link rel="stylesheet" href="../../../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="wrapper">
+            <div id="add">
+                <center><h1>Add</h1></center>
+                
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" class="search1" required><br><br>
+                
+                <label for="artist">Artist:</label>
+                <input type="text" id="artist" name="artist" class="search1" required><br><br>
+                
+                <label for="mediaType">Media Type:</label>
+                <select id="mediaType" name="mediaType" class="search1">
+                    <option value="cd">CD</option>
+                    <option value="vinal">Vinal</option>
+                </select>
+                <br>
+                <label for="albumType">Album Type:</label>
+                <select id="albumType" name="albumType" class="search1">
+                    <option value="album">Album</option>
+                    <option value="single">Single</option>
+                </select>
+                <br>
+                <button class="blue-button" onclick="submit()">Submit</button> <br>
+            </div>
+
+            <div id="comfirm">
+                <center><h1>What is your item?</h1></center>
+
+                <div class="Lcontainer" id="Lcontainer">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../../global.js"></script>
+    <script src="../../../loginCheck.js"></script>
+    <script src="script.js"></script>
+</body>

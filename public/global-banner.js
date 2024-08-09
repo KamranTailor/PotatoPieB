@@ -123,4 +123,8 @@ function closebtn() {
     document.getElementById("banner").style.display = "none";
 }
 
+function toggleTheme() {
+    document.documentElement.classList.toggle('light-theme');
+}
+
 document.addEventListener('DOMContentLoaded', onPageLoad);

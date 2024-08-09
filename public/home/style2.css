@@ -1,7 +1,7 @@
 /* Contact */
 
 #contact-items {
-    background-color: #333;
+    background-color: var(--accent-color-one);
     color: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -24,29 +24,13 @@
 #contact input[type="email"],
 #contact input[type="text"],
 #contact textarea {
-    background-color: #444;
+    background-color: var(--accent-color-three);
     padding: 10px;
     margin-bottom: 10px;
-    color: white;
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     width: 95%;
-}
-
-/* Style the submit button (you can add it to your HTML if needed) */
-#submit-cu {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Style the submit button on hover */
-#submit-cu:hover {
-    background-color: #0056b3;
 }
 
 h1 {
@@ -55,7 +39,7 @@ h1 {
 }
 
 section {
-    background-color: #333;
+    background-color: var(--accent-color-one);
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;

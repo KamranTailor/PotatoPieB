@@ -1,0 +1,58 @@
+.Lcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    max-width: 1200px; /* Adjust the container width as needed */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+.Litem {
+    text-align: center;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures images do not overflow their container */
+    width: fit-content;
+}
+.Litem img {
+    width: 150px;
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+.name {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+#wrapper{
+    background-color: #333;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.search1 {
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search1:focus {
+    border-color: #2196f3; /* Blue border when focused */
+    outline: none; /* Remove default outline */
+}

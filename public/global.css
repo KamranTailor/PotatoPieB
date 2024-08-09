@@ -1,3 +1,84 @@
+/* Color Variables */
+:root {
+    --bg-color: #111;
+    --text-color: #fff;
+    --header-bg-color: #222;
+    --footer-bg-color: #333;
+    --link-hover-color: #ddd;
+    --action-bg-color: #0074d9;
+    --table-border-color: #ddd;
+    --table-hover-bg-color: #555;
+    --striped-table-even-bg-color: #f2f2f2;
+    --striped-table-hover-bg-color: #ddd;
+
+    /* Dashboard Colors */
+    --tube-time-color: #3498db;
+    --coded-items-color: #e74c3c;
+    --gaming-color: #2ecc71;
+    --space-color: #f39c12;
+    --aviation-color: #9b59b6;
+    --transport-color: #34495e;
+    --music-color: #f77067;
+    --admin-color: #d35400;
+    --other-color: #1abc9c;
+
+    /* Button Colors */
+    --red-button-color: #f44336;
+    --red-button-hover-color: #d32f2f;
+    --red-button-active-color: #b71c1c;
+    --green-button-color: #4caf50;
+    --green-button-hover-color: #388e3c;
+    --green-button-active-color: #2e7d32;
+    --blue-button-color: #2196f3;
+    --blue-button-hover-color: #1976d2;
+    --blue-button-active-color: #1565c0;
+
+    --accent-color-one: #333;
+    --accent-color-two: #222;
+    --accent-color-three: #444;
+}
+
+/* Light Theme Variables */
+:root.light-theme {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+    --header-bg-color: #f8d0e8;
+    --footer-bg-color: #f2c8d6;
+    --link-hover-color: #d15d7b;
+    --action-bg-color: #ffafc8;
+    --table-border-color: #fcc;
+    --table-hover-bg-color: #ffe0f7;
+    --striped-table-even-bg-color: #ffe4e9;
+    --striped-table-hover-bg-color: #fdd5e6;
+
+    /* Dashboard Colors */
+    --tube-time-color: #f4a2d5;
+    --coded-items-color: #f7a8a8;
+    --gaming-color: #f4a2d5;
+    --space-color: #ffcc80;
+    --aviation-color: #d1c4e9;
+    --transport-color: #b0bec5;
+    --music-color: #ffd1dc;
+    --admin-color: #ffab91;
+    --other-color: #f4a2d5;
+
+    /* Button Colors */
+    --red-button-color: #ef9a9a;
+    --red-button-hover-color: #e57373;
+    --red-button-active-color: #ef5350;
+    --green-button-color: #f4a2d5;
+    --green-button-hover-color: #f7a8a8;
+    --green-button-active-color: #d56b8d;
+    --blue-button-color: #f4a2d5;
+    --blue-button-hover-color: #f78dbc;
+    --blue-button-active-color: #e685ad;
+
+    --accent-color-one: #f4a2d5; /* More contrasting pink */
+    --accent-color-two: #f78dbc;
+    --accent-color-three: #99c1de;
+}
+
+
 /* Reset some default styles */
 body,
 h1,
@@ -11,15 +92,14 @@ p {
 /* Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 
 main {
     margin: 20px auto;
@@ -30,8 +110,8 @@ main {
 }
 
 header {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
     padding: 10px 0;
 }
 
@@ -65,15 +145,15 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-weight: bold;
 }
 
 /* Footer Styles */
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
     padding: 20px;
     width: 100%;
 }
@@ -96,7 +176,7 @@ footer {
 
 .disclaimer p {
     font-size: 12px;
-    color: white;
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -106,13 +186,13 @@ footer {
 }
 
 .privacy-terms a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     margin-left: 10px; /* Add some space between links */
 }
 
 .privacy-terms a:hover {
-    color: #ddd;
+    color: var(--link-hover-color);
 }
 
 #showM,
@@ -190,7 +270,7 @@ footer {
         border-radius: 20px;
         width: fit-content;
         height: fit-content;
-        background-color: #222;
+        background-color: var(--header-bg-color);
         transition: right 0.3s ease-in-out;
     }
 
@@ -211,8 +291,8 @@ footer {
 }
 
 .action {
-    background-color: #0074d9; /* Change to your desired background color */
-    color: #fff; /* Change to your desired text color */
+    background-color: var(--action-bg-color); /* Change to your desired background color */
+    color: var(--text-color); /* Change to your desired text color */
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -228,24 +308,24 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--table-border-color);
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #222;
+    background-color: var(--header-bg-color);
     font-weight: bold;
 }
 
 /* Table Row Styles */
 tr {
-    background-color: #333;
+    background-color: var(--footer-bg-color);
 }
 
 /* Table Hover Effect Styles */
 tr:hover {
-    background-color: #555;
+    background-color: var(--table-hover-bg-color);
 }
 
 /* Striped Table Styles */
@@ -261,18 +341,18 @@ table.striped th, table.striped td {
 }
 
 table.striped th {
-    background-color: #f2f2f2;
+    background-color: var(--striped-table-even-bg-color);
     font-weight: bold;
 }
 
 /* Striped Table Row Styles */
 table.striped tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--striped-table-even-bg-color);
 }
 
 /* Striped Table Hover Effect Styles */
 table.striped tr:hover {
-    background-color: #ddd;
+    background-color: var(--striped-table-hover-bg-color);
 }
 
 #back {
@@ -293,8 +373,7 @@ table.striped tr:hover {
     max-width: 150px; /* Adjust maximum width as needed */
     text-align: center;
     line-height: 150px;
-    background-color: #3498db;
-    color: #fff;
+    color: var(--text-color);
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -307,63 +386,63 @@ table.striped tr:hover {
 .item:nth-child(10),
 .item:nth-child(19),
 .item:nth-child(28) {
-    background-color: #3498db; /* Tube Time */
+    background-color: var(--tube-time-color); /* Tube Time */
 }
 
 .item:nth-child(2),
 .item:nth-child(11),
 .item:nth-child(20),
 .item:nth-child(29) {
-    background-color: #e74c3c; /* Coded Items */
+    background-color: var(--coded-items-color); /* Coded Items */
 }
 
 .item:nth-child(3),
 .item:nth-child(12),
 .item:nth-child(21),
 .item:nth-child(30) {
-    background-color: #2ecc71; /* Gaming */
+    background-color: var(--gaming-color); /* Gaming */
 }
 
 .item:nth-child(4),
 .item:nth-child(13),
 .item:nth-child(22),
 .item:nth-child(31) {
-    background-color: #f39c12; /* Space */
+    background-color: var(--space-color); /* Space */
 }
 
 .item:nth-child(5),
 .item:nth-child(14),
 .item:nth-child(23),
 .item:nth-child(32) {
-    background-color: #9b59b6; /* Aviation */
+    background-color: var(--aviation-color); /* Aviation */
 }
 
 .item:nth-child(6),
 .item:nth-child(15),
 .item:nth-child(24),
 .item:nth-child(33) {
-    background-color: #34495e; /* Transport */
+    background-color: var(--transport-color); /* Transport */
 }
 
 .item:nth-child(7),
 .item:nth-child(16),
 .item:nth-child(25),
 .item:nth-child(34) {
-    background-color: #f77067; /* Music */
+    background-color: var(--music-color); /* Music */
 }
 
 .item:nth-child(8),
 .item:nth-child(17),
 .item:nth-child(26),
 .item:nth-child(35) {
-    background-color: #d35400; /* Admin */
+    background-color: var(--admin-color); /* Admin */
 }
 
 .item:nth-child(9),
 .item:nth-child(18),
 .item:nth-child(27),
 .item:nth-child(36) {
-    background-color: #1abc9c; /* Other */
+    background-color: var(--other-color); /* Other */
 }
 
 .item:hover {
@@ -371,9 +450,9 @@ table.striped tr:hover {
 }
 
 .red-button {
-    background-color: #f44336; /* Red */
+    background-color: var(--red-button-color); /* Red */
     border: none;
-    color: white;
+    color: var(--text-color);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -385,18 +464,17 @@ table.striped tr:hover {
 }
 
 .red-button:hover {
-    background-color: #d32f2f; /* Darker red */
+    background-color: var(--red-button-hover-color); /* Darker red */
 }
 
 .red-button:active {
-    background-color: #b71c1c; /* Darkest red */
+    background-color: var(--red-button-active-color); /* Darkest red */
 }
 
-
 .green-button {
-    background-color: #4caf50; /* Green */
+    background-color: var(--green-button-color); /* Green */
     border: none;
-    color: white;
+    color: var(--text-color);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -408,19 +486,33 @@ table.striped tr:hover {
 }
 
 .green-button:hover {
-    background-color: #388e3c; /* Darker green */
+    background-color: var(--green-button-hover-color); /* Darker green */
 }
 
 .green-button:active {
-    background-color: #2e7d32; /* Darkest green */
+    background-color: var(--green-button-active-color); /* Darkest green */
+}
+
+.blue-button {
+    background-color: var(--blue-button-color); /* Blue */
+    border: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.blue-button:hover {
+    background-color: var(--blue-button-hover-color); /* Darker blue */
+}
+
+.blue-button:active {
+    background-color: var(--blue-button-active-color); /* Darkest blue */
 }
 
 
-#info {
-    background-color: #333;
-    border-radius: 15px;
-    padding: 10px;
-    width: fit-content;
-    margin-top: 20px;
-    font-size: 15px;
-}

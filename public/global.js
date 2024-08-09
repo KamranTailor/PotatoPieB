@@ -111,4 +111,10 @@ function smallClose() {
     menu_open.style.display = 'block'; 
 }
 
+// Function to toggle light and dark themes
+function toggleTheme() {
+    document.documentElement.classList.toggle('light-theme');
+}
+
+
 document.addEventListener('DOMContentLoaded', onPageLoad);

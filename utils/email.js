@@ -50,4 +50,21 @@ async function sendEmail(toEmail, subject, content) {
   }
 }
 
-export default sendEmail;
+async function sendEmailHTML(toEmail, subject, html) {
+  let mailOptions = {
+    from: email,
+    to: toEmail,
+    subject: subject,
+    html: html
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+}
+
+export { sendEmail, sendEmailHTML };

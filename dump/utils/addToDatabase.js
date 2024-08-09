@@ -1,4 +1,5 @@
-import fsPromises from 'fs/promises'; // Import fsPromises from Node.js ES Modules
+import fsPromises from '../../utils/fsPromises.js'; // Import fsPromises from the CommonJS module
+
 
 // Define the path to your JSON file
 const filePath = '../database/flight/hourFlights.json';

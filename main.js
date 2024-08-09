@@ -2,6 +2,8 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+dotenv.config();
 
 //APP APIS
 import shopRouter from './app/my-fn/shop.js';
@@ -27,13 +29,26 @@ import createUserAdminRouter from './api/users/makeUser.js';
 import userActionsAdminRouter from './api/users/userActions.js';
 import changePasswordRouter from './api/users/changePassword.js';
 
+import flightDataRouter from './api/flight/getFlights.js';
+
+import bankingRouter from './api/banking/banking.js';
+
+import musicCollectionRouter from './api/music_collection/index.js';
+
+//Express 
 const app = express();
-
-// Parse JSON bodies
 app.use(bodyParser.json());
-
-// Parse URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//API Middleware
+function apiKeyMiddleware(req, res, next) {
+    const apiKey = req.query.apiKey;
+    if (apiKey === process.env.API_KEY_BANKING) {
+        next(); // API key is valid, proceed to the route handler
+    } else {
+        res.status(403).json({ error: 'Forbidden: Invalid API Key' });
+    }
+}
 
 // Use the routers
 app.use('/app', shopRouter);
@@ -41,7 +56,6 @@ app.use('/app', statsRouter);
 app.use('/app-tfl', statusRouter);
 app.use('/app-tfl', nearbyRouter);
 app.use('/app-tfl', stoppointRouter);
-
 
 app.use('/contact', contactRouter);
 app.use('/homepageBanner', homeBannerRouter);
@@ -58,5 +72,13 @@ app.use('/otpAdmin', otpAdminRouter);
 app.use('/createUserAdminRouter', createUserAdminRouter);
 app.use('/userActionsAdmin', userActionsAdminRouter);
 app.use('/changePassword', changePasswordRouter);
+
+app.use('/flightApi', flightDataRouter);
+
+app.use('/banking', apiKeyMiddleware, bankingRouter); 
+
+app.use('/musicCollection', musicCollectionRouter); 
+
+
 
 export default app;
