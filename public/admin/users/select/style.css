@@ -38,3 +38,9 @@ select {
 #update:hover {
     background-color: #45a049;
 }
+
+
+#propertiesAdd {
+    width: 85%;
+    margin-right: 2%;
+}

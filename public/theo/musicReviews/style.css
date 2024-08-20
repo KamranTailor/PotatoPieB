@@ -1,0 +1,64 @@
+#admin-edit {
+    display: none;
+}
+
+#Lcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 20px; /* Space between items */
+  }
+  
+  /* Each item */
+  .Litem {
+    background-color: var(--accent-color-two);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Adjust width to fit four items per row */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* The album name */
+  .Litem .name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  /* The album cover image */
+  .Litem img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* For smaller screens, adjust layout */
+  @media (max-width: 1024px) {
+    .Litem {
+      width: calc(33% - 20px); /* Three items per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Litem {
+      width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Litem {
+      width: 100%; /* One item per row on very small screens */
+    }
+  }
+
+  #searchInput {
+    background-color: var(--accent-color-three);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  

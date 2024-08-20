@@ -1,0 +1,38 @@
+:root {
+    --bg-color: #fafafa; /* Light gray background for a lighter theme */
+    --text-color: #333; /* Dark text color for readability on light background */
+    --header-bg-color: #ffffff; /* White header for a clean look */
+    --footer-bg-color: #dddddd; /* Light gray footer for consistency */
+    --link-hover-color: #0056b3; /* Blue link hover for contrast */
+    --action-bg-color: #ff851b; /* Bright orange action buttons */
+    --table-border-color: #cccccc; /* Light gray table borders */
+    --table-hover-bg-color: #e0e0e0; /* Light gray table row hover */
+    --striped-table-even-bg-color: #f9f9f9; /* Very light gray for even table rows */
+    --striped-table-hover-bg-color: #eeeeee; /* Slightly darker hover for table rows */
+
+    /* Dashboard Colors */
+    --tube-time-color: #1abc9c; /* Teal for tube time */
+    --coded-items-color: #e74c3c; /* Slightly softer red for coded items */
+    --gaming-color: #8e44ad; /* A purple shade for gaming */
+    --space-color: #f1c40f; /* Yellow for space-related items */
+    --aviation-color: #3498db; /* Blue for aviation */
+    --transport-color: #2c3e50; /* Dark blue for transport */
+    --music-color: #e67e22; /* Orange for music-related items */
+    --admin-color: #c0392b; /* Dark red for admin-related sections */
+    --other-color: #16a085; /* Teal for other categories */
+
+    /* Button Colors */
+    --red-button-color: #e57373; /* Lighter red for buttons */
+    --red-button-hover-color: #ef5350; /* Slightly darker hover red */
+    --red-button-active-color: #c62828; /* Dark red active state */
+    --green-button-color: #81c784; /* Lighter green for buttons */
+    --green-button-hover-color: #66bb6a; /* Slightly darker green on hover */
+    --green-button-active-color: #388e3c; /* Darker green on active state */
+    --blue-button-color: #64b5f6; /* Light blue buttons */
+    --blue-button-hover-color: #42a5f5; /* Darker blue on hover */
+    --blue-button-active-color: #1e88e5; /* Dark blue on active */
+
+    --accent-color-one: #eeeeee; /* Very light gray for accents */
+    --accent-color-two: #dddddd; /* Light gray for secondary accents */
+    --accent-color-three: #cccccc; /* Slightly darker gray for tertiary accents */
+}

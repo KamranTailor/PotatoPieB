@@ -13,7 +13,7 @@
     <main>
         <br>
         <center><h1>SERVER VERSION: <span id="version">WAITING FOR SERVER</span></h1></center>
-        <center><h1>CLIENT VERSION: <span id="version">V010.00.000</span></h1></center>
+        <center><h1>CLIENT VERSION: <span id="versionC">WAITING FOR CLINET</span></h1></center>
     </main>
     <script>
         async function onStart() {
@@ -21,7 +21,12 @@
             const data = await responce.json()
             console.log(data)
 
+            const Cresponse = await fetch ('../../version.txt');
+            const datac = await Cresponse.text();
+            console.log(datac)
+
             document.getElementById("version").innerHTML= data.version;
+            document.getElementById("versionC").innerHTML= datac;
         }
 
         onStart()

@@ -116,5 +116,8 @@ function toggleTheme() {
     document.documentElement.classList.toggle('light-theme');
 }
 
+function hrefButton(location) {
+    window.location = location;
+}
 
 document.addEventListener('DOMContentLoaded', onPageLoad);

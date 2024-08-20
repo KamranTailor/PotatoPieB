@@ -35,6 +35,8 @@ import bankingRouter from './api/banking/banking.js';
 
 import musicCollectionRouter from './api/music_collection/index.js';
 
+import theosMusicRouter from './api/clients/theo/index.js';
+
 //Express 
 const app = express();
 app.use(bodyParser.json());
@@ -79,6 +81,6 @@ app.use('/banking', apiKeyMiddleware, bankingRouter);
 
 app.use('/musicCollection', musicCollectionRouter); 
 
-
+app.use('/clients/theo', theosMusicRouter); 
 
 export default app;

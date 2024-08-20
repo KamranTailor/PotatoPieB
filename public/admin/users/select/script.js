@@ -42,6 +42,20 @@ async function getUser() {
     document.getElementById("permissions").value = userData.permissions;
     document.getElementById("phoneNumber").value = userData.phone_number;
     document.getElementById("username").value = userData.username;
+
+    let toAdd = "";
+    for (i in userData.propertys)  {
+      toAdd += `${userData.propertys[i]}`;
+    }
+    document.getElementById("propertys").innerHTML = toAdd;
+}
+
+async function updatePropertys() {
+  let toAdd = "";
+  for (i in userData.propertys)  {
+    toAdd += `${propertys[i]}`;
+  }
+  document.getElementById("propertys").innerHTML = toAdd;
 }
 
 getUser()

@@ -1,0 +1,31 @@
+#album-info {
+    margin: 20px auto;
+    background: var(--accent-color-two);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+.details, .links {
+    margin-bottom: 20px;
+}
+.details p {
+    margin: 5px 0;
+}
+.images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.links p {
+    margin: 5px 0;
+}
+.links a {
+    color: #1db954;
+    text-decoration: none;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+.iframe-container {
+    margin-bottom: 20px;
+}
