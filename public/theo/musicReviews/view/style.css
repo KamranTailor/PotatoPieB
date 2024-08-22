@@ -29,3 +29,18 @@
 .iframe-container {
     margin-bottom: 20px;
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+    text-align: center;
+}
+
+.right {
+    flex: 0;
+}

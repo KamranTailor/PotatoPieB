@@ -37,23 +37,26 @@ async function renderAlbumData() {
     const albumInfoDiv = document.getElementById('album-info');
 
     const albumHtml = `
-        <center> <h1>${data.spotifyData.name}</h1> </center>
-        <br>
-        <div class="iframe-container">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/${data.spotifyData.id}?utm_source=generator" 
-            width="100%" height="352" frameBorder="0" allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="details">
+    <div class="container">
+        <div class="left">
+            <center><h1>${data.spotifyData.name}</h1></center>
+             <div class="details">
             Writen By <strong>${data.createdBy}</strong> on <i>${new Date(data.createdAt).toLocaleDateString()}</i>
         </div>
+        </div>
+        <div class="right">
+            <img src="${data.spotifyData.images[0].url}" alt="Album Cover" width="200" height="200"/>
+        </div>
+    </div>
+
+        <br>
+       
         <div class="details">
             ${data.review}
         </div>
-        <div class="links">
-            <p><strong>Listen on Spotify:</strong> <a href="${data.spotifyData.external_urls.spotify}" target="_blank">Album Link</a></p>
-            <p><strong>Artist:</strong> ${data.artist}</p>
-        </div>
+
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/${data.spotifyData.id}?utm_source=generator" width="100%" height="152" frameBorder="0"
+         allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     `;
 
     albumInfoDiv.innerHTML = albumHtml;
