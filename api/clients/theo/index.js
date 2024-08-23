@@ -31,13 +31,14 @@ router.post('/addMusic', async (request, response) => {
     try {
         // Get the data from the request body
         const requestData = request.body;
-        console.log('Received data:', requestData);
         const pushData = {
             uuid: uuidv4(),
             artist: requestData.artist,
             name: requestData.name,
             spotifyData: requestData.spotifyData,
             review: requestData.review,
+            subtitle: requestData.subtitle,
+            rating: requestData.rating,
             createdBy: requestData.createdBy,
             createdAt: new Date().toISOString(),
             comments: []

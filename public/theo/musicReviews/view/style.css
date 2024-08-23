@@ -33,14 +33,52 @@
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    color: #E0E0E0;
+    align-items: flex-start; /* Align the right container items at the top */
 }
 
 .left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
     text-align: center;
+    height: 200px; /* Match the height of the image to ensure proper vertical centering */
 }
 
 .right {
     flex: 0;
 }
+
+.rating-and-image {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.review-rating {
+    font-family: Arial, sans-serif;
+    color: #E0E0E0;
+    line-height: 1.6;
+    margin-right: 20px; /* Space between the rating and the image */
+}
+
+.review-rating .rating {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFC107;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.album-cover {
+    width: 200px;
+    height: 200px;
+}
+
+.details {
+    font-family: Arial, sans-serif;
+    color: #E0E0E0;
+}
+
+

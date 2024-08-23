@@ -66,6 +66,10 @@ function selectOption(opt) {
             <p>Total Tracks: ${r.total_tracks}</p>
         </div>
     </div>
+    <label for="rating">Rating:</label>   <span id="rangeValue">5</span></p>
+    <input id="rating" type="range" min="0" max="10" oninput="updateValue(this.value)" />
+    <label for="subtitle">Subtitle:</label>
+    <input id="subtitle" />
     <textarea id="review" replaceholder="Your thoughts about this album..."></textarea>
     <button onclick="addReview()" class="green-button">Add Review</button>
   `;  
@@ -88,6 +92,8 @@ async function addReview() {
       name: album.name,
       spotifyData: album,
       review: document.getElementById('review').value,
+      subtitle: document.getElementById('subtitle').value,
+      rating: document.getElementById('rating').value,
       createdBy: (`${cps.content.first_name} ${cps.content.second_name}`),
     })
   });
@@ -100,4 +106,8 @@ async function addReview() {
   } else {
     alert('Failed to add review. Please try again.');
   }
+}
+
+function updateValue(value) {
+  document.getElementById('rangeValue').textContent = value;
 }

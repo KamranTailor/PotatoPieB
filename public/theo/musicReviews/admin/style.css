@@ -11,13 +11,14 @@ label {
     font-weight: bold;
 }
 
-input {
+input, textarea {
     background-color: var(--accent-color-three);
     padding: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
     width: 95%;
+    color: #fff;
 }
 
 /* Container that holds the items */
